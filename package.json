@@ -1,0 +1,26 @@
+{
+  "name": "turismo-escondido",
+  "version": "5.1.0",
+  "private": true,
+  "type": "module",
+  "description": "GuÃ­a cultural de El Salvador con cuentas y planes persistentes",
+  "engines": {
+    "node": ">=24.15.0 <25"
+  },
+  "scripts": {
+    "start": "node server.mjs",
+    "dev": "node --watch server.mjs",
+    "test": "node --test test/*.test.mjs",
+    "admin": "node scripts/admin.mjs",
+    "start:local": "node --env-file-if-exists=.env server.mjs",
+    "check": "node --check server.mjs"
+  },
+  "dependencies": {
+    "exceljs": "4.4.0"
+  },
+  "overrides": {
+    "exceljs": {
+      "uuid": "11.1.1"
+    }
+  }
+}
